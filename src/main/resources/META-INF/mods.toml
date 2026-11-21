@@ -1,0 +1,56 @@
+﻿[[mods]]
+modId = "create_deepbase"
+version = "\"
+displayName = "Create: Deep Base"
+authors = "GaMa Studios"
+description = "Static underwater bases for Create: Deep Seas. Adds pressure, oxygen, and kinetic pumps to static structures."
+license = "All Rights Reserved"
+
+[[dependencies.create_deepbase]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.create_deepbase]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.create_deepbase]]
+    modId="create"
+    type="required"
+    versionRange="[0.5,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.create_deepbase]]
+    modId="create_submarine"
+    type="required"
+    versionRange="[3.4.8,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.create_deepbase]]
+    modId="sable"
+    type="required"
+    versionRange="[2.0.3,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.create_deepbase]]
+    modId="aeronautics"
+    type="required"
+    versionRange="[1.3.2,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.create_deepbase]]
+    modId="simulated"
+    type="required"
+    versionRange="[1.3.0,)"
+    ordering="AFTER"
+    side="BOTH"

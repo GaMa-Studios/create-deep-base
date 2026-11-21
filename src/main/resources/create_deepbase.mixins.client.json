@@ -1,0 +1,9 @@
+﻿{
+    "package":  "gama.studios.deepbase.mixin.client",
+    "client":  [
+                   "SubmarineWaterCullMixin"
+               ],
+    "compatibilityLevel":  "JAVA_21",
+    "minVersion":  "0.8",
+    "required":  true
+}

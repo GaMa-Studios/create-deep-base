@@ -1,1 +1,7 @@
 ﻿accessWidener v1 java mappings
+
+# Allow our mixins to access private fields in Deep Seas
+extendable class com.maxenonyme.createsubmarine.submarine.block.entity.OxygeneDiffuserBlockEntity
+extendable class com.maxenonyme.createsubmarine.submarine.block.entity.ElectrolyzerBlockEntity
+extendable class com.maxenonyme.createsubmarine.submarine.block.entity.DecompressionChamberBlockEntity
+extendable class com.maxenonyme.createsubmarine.submarine.system.SubmarinePressureSystem

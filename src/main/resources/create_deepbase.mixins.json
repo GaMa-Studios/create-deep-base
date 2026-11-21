@@ -1,0 +1,15 @@
+﻿{
+    "minVersion":  "0.8",
+    "compatibilityLevel":  "JAVA_21",
+    "client":  [
+                   {
+                       "config":  "create_deepbase.mixins.client.json"
+                   }
+               ],
+    "required":  true,
+    "package":  "gama.studios.deepbase.mixin",
+    "mixins":  [
+                   "EntityWaterPhysicsMixin",
+                   "LevelChunkMixin"
+               ]
+}
