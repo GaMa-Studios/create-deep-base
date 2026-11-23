@@ -1,74 +1,7 @@
-﻿plugins {
+plugins {
     id 'java'
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle' version '[7.0,8.0)'
-}
-
-version = '1.0.0'
-group = 'gama.studios'
-archivesBaseName = 'create_deepbase'
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}
-
-repositories {
-    mavenCentral()
-    maven { url = 'https://maven.minecraftforge.net/' }
-    maven { url = 'https://maven.neoforged.net/releases/' }
-    maven { name = "Create"; url = "https://api.modrinth.com/maven" }
-    flatDir { dirs 'libs' }
-}
-
-dependencies {
-    implementation fg.deobf("com.mojang:minecraft:1.21.1")
-    implementation fg.deobf("net.neoforged:neoforge:21.1.0")
-    
-    // Required Deep Seas stack (Local JARs)
-    compileOnly files('libs/create-0.5.1.jar')
-    compileOnly files('libs/create_submarine-3.4.8.jar')
-    compileOnly files('libs/sable-2.0.3.jar')
-    compileOnly files('libs/aeronautics-1.3.2.jar')
-    compileOnly files('libs/simulated-1.3.0.jar')
-    
-    runtimeOnly files('libs/lithostitched-1.0.jar')
-    
-    annotationProcessor 'org.jetbrains:annotations:24.0.1'
-}
-
-loom {
-    silentMojangMappingsLicense()
-    accessWidenerPath = file("src/main/resources/create_deepbase.accesswidener")
-    mixinConfig "create_deepbase.mixins.json"
-}
-
-jar {
-    manifest {
-        attributes([
-            "Specification-Title": "create_deepbase",
-            "Specification-Vendor": "GaMa Studios",
-            "Implementation-Title": project.name,
-            "Implementation-Version": version
-        ])
-    }
-}
-
-neoforge {
-    runs {
-        configureEach {
-            property "mixin.env.remapRefMap", "true"
-            property "mixin.env.refmapRemap", "true"
-        }
-        client {
-            property "forge.enabledGameTestNamespaces", "create_deepbase"
-            mods { create_deepbase { source sourceSets.main } }
-        }
-        server {
-            mods { create_deepbase { source sourceSets.main } }
-        }
-    }
+    id 'net.neoforged.gradle' version '[7.0,8.0)' // <-- Эта строка самая важная
 }

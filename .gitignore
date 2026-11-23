@@ -58,6 +58,7 @@ replay_pid*
 /.eclipse
 /sodium_shaders
 /Wiki
+/.idea
 
 
 /classpath.txt
